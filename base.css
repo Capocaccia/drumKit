@@ -1,0 +1,65 @@
+.wrapper {
+	height: 100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	background-color: rgba(15, 22, 38, 0.7);
+	background-image: url('images/concert.jpg');
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.keys {
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	flex-grow: 1;
+	border: .4rem solid black;
+	border-radius: .5rem;
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	transition: all .07s ease;
+	text-align: center;
+	color: white;
+	background: rgba(0,0,0,0.4);
+	text-shadow: 0 0 .5rem black;
+}
+
+.sound {
+	font-size: 12px;
+  	color: #ffc600;
+	font-weight: bold;
+	letter-spacing: .15rem;
+	text-transform: uppercase;
+}
+
+.playing{
+	transform: scale(1.1);
+	border-color: #ffc600;
+	box-shadow: 0 0 10px #ffc600;
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
