@@ -1,8 +1,10 @@
 window.addEventListener('keydown', playSound);
 
+window.addEventListener('click', playSound);
+
 function playSound(e){
-	var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-	var key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+	var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`) !== null ? document.querySelector(`audio[data-key="${e.keyCode}"]`) : document.querySelector(`audio[data-key="${e.target.dataset.key}"]`);
+	var key = document.querySelector(`.key[data-key="${e.keyCode}"]`) !== null ? document.querySelector(`.key[data-key="${e.keyCode}"]`) : document.querySelector(`.key[data-key="${e.target.dataset.key}"]`);
 	var keys = document.querySelectorAll('.key');
 
 	if(!audio) return;
